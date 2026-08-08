@@ -1,0 +1,75 @@
+# Al Hidaya Auto Spare Parts Website - Robots.txt
+# Search Engine Crawling Guidelines
+# Last Updated: 2026-08-08
+
+# ========== ALLOW ALL SEARCH ENGINES ==========
+User-agent: *
+Allow: /
+
+# ========== SPECIFIC SEARCH ENGINE RULES ==========
+
+# Google - Standard crawling allowed
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing - Standard crawling allowed
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo - Standard crawling allowed
+User-agent: DuckDuckBot
+Allow: /
+
+# ========== RATE LIMITING FOR AGGRESSIVE BOTS ==========
+
+# Ahrefs - Slow down aggressive crawling
+User-agent: AhrefsBot
+Crawl-delay: 10
+Request-rate: 1/10s
+
+# Semrush - Slow down aggressive crawling
+User-agent: SemrushBot
+Crawl-delay: 10
+Request-rate: 1/10s
+
+# MJ12 Bot - Rate limiting
+User-agent: MJ12bot
+Crawl-delay: 5
+
+# DotBot - Rate limiting
+User-agent: DotBot
+Crawl-delay: 10
+
+# ========== DISALLOW PRIVATE/ADMIN AREAS ==========
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /config/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# ========== ALLOW STATIC ASSETS ==========
+User-agent: *
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# ========== SITEMAP LOCATION ==========
+Sitemap: https://alhidaya-auto-spare-parts.netlify.app/sitemap.xml
+Sitemap: https://alhidaya-auto-spare-parts.netlify.app/sitemap-brands.xml
+
+# ========== GENERAL CRAWL SETTINGS ==========
+# Default crawl delay for all bots
+Crawl-delay: 1
+
+# Request rate (1 request every 1 second)
+Request-rate: 1/1s
